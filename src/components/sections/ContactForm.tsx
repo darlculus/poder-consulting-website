@@ -16,13 +16,13 @@ export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const services = [
-    'Self-Employed Tax Return',
-    'Company Director Tax Return',
-    'Property Landlord Tax Return',
-    'Capital Gains Tax',
-    'UTR Registration',
-    'Tax Consultation',
-    'Other',
+    'Accounting Services',
+    'Tax Compliance',
+    'Payroll Management',
+    'ERP Solutions',
+    'Financial Advisory',
+    'Corporate Services',
+    'Business Consultation',
   ]
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -113,7 +113,7 @@ export default function ContactForm() {
             <div>
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               <p className="text-gray-600 mb-8">
-                We're here to help with all your tax needs. Reach out to us through any of the following channels.
+                We're here to help with all your business needs. Reach out to us through any of the following channels.
               </p>
             </div>
 
@@ -141,10 +141,10 @@ export default function ContactForm() {
               </div>
               <div>
                 <h4 className="font-bold text-gray-900 mb-1">Call Us</h4>
-                <a href="tel:+442012345678" className="text-primary-600 hover:text-primary-700">
-                  +44 20 1234 5678
+                <a href="tel:+2348012345678" className="text-primary-600 hover:text-primary-700">
+                  +234 801 234 5678
                 </a>
-                <p className="text-sm text-gray-500">Mon-Fri, 9am-6pm GMT</p>
+                <p className="text-sm text-gray-500">Mon-Fri, 9am-6pm WAT</p>
               </div>
             </motion.div>
 
@@ -157,7 +157,7 @@ export default function ContactForm() {
               </div>
               <div>
                 <h4 className="font-bold text-gray-900 mb-1">Visit Us</h4>
-                <p className="text-gray-600">London, United Kingdom</p>
+                <p className="text-gray-600">Lagos, Nigeria</p>
               </div>
             </motion.div>
 
@@ -167,9 +167,9 @@ export default function ContactForm() {
               <div className="space-y-3">
                 {[
                   '24-hour response time',
-                  'HMRC registered specialists',
-                  '20,000+ successful returns',
-                  'Fixed transparent pricing',
+                  'NRS compliant specialists',
+                  '500+ businesses served',
+                  'Comprehensive solutions',
                 ].map((item, i) => (
                   <motion.div
                     key={i}
@@ -248,7 +248,7 @@ export default function ContactForm() {
                       onChange={handleChange}
                       required
                       className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-600 focus:outline-none transition-all"
-                      placeholder="+44 20 1234 5678"
+                      placeholder="+234 801 234 5678"
                     />
                   </div>
                 </div>
@@ -291,7 +291,7 @@ export default function ContactForm() {
                       required
                       rows={4}
                       className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-600 focus:outline-none transition-all resize-none"
-                      placeholder="Tell us about your tax needs..."
+                      placeholder="Tell us about your business needs..."
                     />
                   </div>
                 </div>

@@ -6,17 +6,17 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'luc
 
 export default function Footer() {
   const services = [
-    'Tax Return Preparation',
-    'Tax Health Check',
-    'Capital Gains Report',
-    'UTR Registration',
+    'Accounting Services',
+    'Tax Compliance', 
+    'Payroll Management',
+    'ERP Solutions',
   ]
 
-  const resources = [
-    'Tax Calculator',
-    'Blog',
-    'FAQs',
-    'Tax Guides',
+  const quickLinks = [
+    'About Us',
+    'Our Services',
+    'How We Work',
+    'Contact Us',
   ]
 
   const legal = [
@@ -41,8 +41,8 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-400 mb-6 max-w-sm">
-              Professional tax consulting services with transparent pricing. 
-              Making tax filing simple and stress-free.
+              Professional business consulting services for Nigerian enterprises. 
+              Comprehensive solutions for accounting, tax compliance, and business growth.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
@@ -53,13 +53,13 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-primary-400" />
-                <a href="tel:+442012345678" className="hover:text-white transition-colors">
-                  +44 20 1234 5678
+                <a href="tel:+2348012345678" className="hover:text-white transition-colors">
+                  +234 801 234 5678
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin size={18} className="text-primary-400" />
-                <span>London, United Kingdom</span>
+                <span>Lagos, Nigeria</span>
               </div>
             </div>
           </div>
@@ -78,28 +78,35 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-bold mb-4">Resources</h3>
+            <h3 className="text-white font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {resources.map((resource, i) => (
+              {quickLinks.map((link, i) => (
                 <li key={i}>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    {resource}
-                  </Link>
+                  <a href={`#${link.toLowerCase().replace(' ', '-')}`} className="hover:text-white transition-colors">
+                    {link}
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-white font-bold mb-4">Legal</h3>
+            <h3 className="text-white font-bold mb-4">Contact Info</h3>
             <ul className="space-y-2">
-              {legal.map((item, i) => (
-                <li key={i}>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <span className="text-gray-400">Email:</span>
+                <br />
+                <a href="mailto:hello@poderconsulting.com" className="hover:text-white transition-colors">
+                  hello@poderconsulting.com
+                </a>
+              </li>
+              <li>
+                <span className="text-gray-400">Phone:</span>
+                <br />
+                <a href="tel:+2348012345678" className="hover:text-white transition-colors">
+                  +234 801 234 5678
+                </a>
+              </li>
             </ul>
           </div>
         </div>
