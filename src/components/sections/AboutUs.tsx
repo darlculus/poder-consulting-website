@@ -10,79 +10,79 @@ export default function AboutUs() {
 
   const tabs = [
     { id: 'overview', label: 'Overview', icon: Building2 },
-    { id: 'who-uses', label: 'Who Uses Us', icon: Users },
+    { id: 'why-exist', label: 'Why We Exist', icon: TrendingUp },
+    { id: 'who-uses', label: 'Who We Serve', icon: Users },
     { id: 'testimonials', label: 'Testimonials', icon: Star },
-    { id: 'partners', label: 'Trusted Partners', icon: Award },
   ]
 
   const stats = [
-    { number: '20,000+', label: 'Tax Returns Filed', icon: TrendingUp },
-    { number: '15+', label: 'Years Experience', icon: Award },
+    { number: '500+', label: 'Businesses Served', icon: TrendingUp },
+    { number: '8+', label: 'Years Experience', icon: Award },
     { number: '4.9/5', label: 'Client Rating', icon: Star },
     { number: '98%', label: 'Success Rate', icon: CheckCircle },
   ]
 
   const clientTypes = [
     {
-      icon: '💼',
-      title: 'Self-Employed Professionals',
-      description: 'Freelancers, consultants, and contractors who need expert tax guidance.',
-      count: '8,500+',
-    },
-    {
       icon: '🏢',
-      title: 'Small Business Owners',
-      description: 'Company directors and entrepreneurs managing their business taxes.',
-      count: '5,200+',
+      title: 'Small & Medium Enterprises',
+      description: 'Growing businesses needing comprehensive accounting and tax compliance support.',
+      count: '200+',
     },
     {
-      icon: '🏠',
-      title: 'Property Landlords',
-      description: 'Rental property owners with multiple income streams.',
-      count: '4,100+',
+      icon: '🏦',
+      title: 'Startups & New Businesses',
+      description: 'New companies requiring business registration, setup, and initial compliance.',
+      count: '150+',
     },
     {
-      icon: '📈',
-      title: 'Investors',
-      description: 'Individuals with capital gains, dividends, and investment income.',
-      count: '2,200+',
+      icon: '💼',
+      title: 'Professional Services',
+      description: 'Consultants, lawyers, and professionals managing their business operations.',
+      count: '100+',
+    },
+    {
+      icon: '🏭',
+      title: 'Manufacturing & Trading',
+      description: 'Companies in manufacturing and trading sectors with complex tax requirements.',
+      count: '50+',
     },
   ]
 
   const testimonials = [
     {
-      name: 'Sarah Mitchell',
-      role: 'Freelance Consultant',
+      name: 'Adebayo Ogundimu',
+      role: 'CEO, Tech Startup',
       image: '/images/testimonial-1.jpg',
       rating: 5,
-      text: 'Poder Consulting transformed my tax filing experience. Their team is professional, responsive, and made everything so simple. Highly recommend!',
-      company: 'SM Consulting Ltd',
+      text: 'Poder Consulting transformed our business operations. Their expertise in Nigerian tax compliance and business setup was invaluable for our growth.',
+      company: 'TechFlow Nigeria Ltd',
     },
     {
-      name: 'James Thompson',
-      role: 'Property Investor',
+      name: 'Fatima Mohammed',
+      role: 'Managing Director',
       image: '/images/testimonial-2.jpg',
       rating: 5,
-      text: 'Best tax service I\'ve used. They handled my complex property portfolio with expertise and saved me thousands. Worth every penny!',
-      company: 'Thompson Properties',
+      text: 'Excellent service! They handled our payroll, PAYE, and all statutory compliance seamlessly. Highly professional team.',
+      company: 'Northern Trading Co.',
     },
     {
-      name: 'Emily Chen',
-      role: 'Tech Startup Founder',
+      name: 'Chinedu Okwu',
+      role: 'Business Owner',
       image: '/images/testimonial-3.jpg',
       rating: 5,
-      text: 'As a busy founder, I needed a tax partner I could trust. Poder Consulting delivered beyond expectations. Professional and efficient!',
-      company: 'TechFlow Solutions',
+      text: 'From company registration to ongoing accounting support, Poder Consulting has been our trusted partner. Outstanding service delivery!',
+      company: 'Okwu Manufacturing',
     },
   ]
 
   const partners = [
-    { name: 'HMRC', logo: '🏛️', description: 'Registered Agent' },
-    { name: 'ACCA', logo: '📜', description: 'Certified Accountants' },
-    { name: 'ICB', logo: '🎓', description: 'Institute Member' },
+    { name: 'NRS', logo: '🏛️', description: 'Registered Agent' },
+    { name: 'ICAN', logo: '📜', description: 'Certified Accountants' },
+    { name: 'CITN', logo: '🎓', description: 'Institute Member' },
     { name: 'Xero', logo: '💻', description: 'Gold Partner' },
     { name: 'QuickBooks', logo: '📊', description: 'ProAdvisor' },
-    { name: 'Stripe', logo: '💳', description: 'Verified Partner' },
+    { name: 'Paystack', logo: '💳', description: 'Verified Partner' },
   ]
 
   return (
@@ -122,7 +122,7 @@ export default function AboutUs() {
             </span>
           </motion.h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Your trusted partner in tax excellence, serving thousands of clients with professionalism and care
+            Your trusted partner in business excellence, empowering Nigerian enterprises with comprehensive solutions
           </p>
         </motion.div>
 
@@ -206,16 +206,16 @@ export default function AboutUs() {
                   className="space-y-4 text-gray-700 leading-relaxed"
                 >
                   <p className="text-lg">
-                    <strong className="text-primary-600">Poder Consulting</strong> is a leading tax consultancy firm dedicated to making tax filing simple, 
-                    transparent, and stress-free for individuals and businesses across the UK.
+                    <strong className="text-primary-600">Poder Consulting</strong> is a leading business consultancy firm dedicated to empowering 
+                    Nigerian enterprises with comprehensive accounting, tax compliance, payroll, and ERP solutions.
                   </p>
                   <p>
-                    With over 15 years of experience and a team of HMRC-registered tax specialists, we've helped over 20,000 clients 
-                    navigate the complexities of UK tax law with confidence and ease.
+                    With over 8 years of experience and a team of NRS-compliant specialists, we've helped over 500 businesses 
+                    navigate the complexities of Nigerian business regulations with confidence and strategic insight.
                   </p>
                   <p>
-                    Our mission is to provide exceptional tax services that combine expert knowledge with cutting-edge technology, 
-                    delivering a seamless experience from start to finish.
+                    Our mission is to provide exceptional business services that combine expert knowledge with innovative solutions, 
+                    delivering seamless experiences that drive business growth and compliance.
                   </p>
                 </motion.div>
 
@@ -226,9 +226,9 @@ export default function AboutUs() {
                   className="mt-8 grid md:grid-cols-3 gap-6"
                 >
                   {[
-                    { title: 'Expert Team', desc: 'HMRC-registered specialists' },
-                    { title: 'Transparent Pricing', desc: 'No hidden fees, ever' },
-                    { title: 'Fast Turnaround', desc: '48-hour service' },
+                    { title: 'Expert Team', desc: 'NRS-compliant specialists' },
+                    { title: 'Transparent Approach', desc: 'Clear communication, always' },
+                    { title: 'Comprehensive Service', desc: 'Full business solutions' },
                   ].map((item, i) => (
                     <motion.div
                       key={i}
@@ -240,6 +240,92 @@ export default function AboutUs() {
                       <p className="text-sm text-gray-600">{item.desc}</p>
                     </motion.div>
                   ))}
+                </motion.div>
+              </div>
+            </motion.div>
+          )}
+
+          {activeTab === 'why-exist' && (
+            <motion.div
+              key="why-exist"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ duration: 0.5 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-gradient-to-br from-accent-50 to-primary-50 rounded-2xl p-8 md:p-12 shadow-xl">
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-3xl font-bold mb-6 text-center"
+                >
+                  Why We Exist
+                </motion.h3>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                  className="space-y-6 text-gray-700 leading-relaxed"
+                >
+                  <p className="text-lg text-center mb-8">
+                    <strong className="text-primary-600">We exist to bridge the gap between business ambition and regulatory compliance in Nigeria.</strong>
+                  </p>
+                  
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.4 }}
+                      className="bg-white rounded-xl p-6 shadow-md"
+                    >
+                      <h4 className="text-xl font-bold text-primary-600 mb-3">🎯 Our Purpose</h4>
+                      <p>
+                        Many Nigerian businesses struggle with complex regulatory requirements, from PAYE calculations to NRS compliance. 
+                        We simplify these challenges, allowing entrepreneurs to focus on what they do best - growing their businesses.
+                      </p>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.5 }}
+                      className="bg-white rounded-xl p-6 shadow-md"
+                    >
+                      <h4 className="text-xl font-bold text-accent-600 mb-3">🚀 Our Vision</h4>
+                      <p>
+                        To be Nigeria's most trusted business partner, empowering every enterprise - from startups to established companies - 
+                        with the tools, knowledge, and support needed to thrive in today's competitive landscape.
+                      </p>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.6 }}
+                      className="bg-white rounded-xl p-6 shadow-md"
+                    >
+                      <h4 className="text-xl font-bold text-primary-600 mb-3">💡 Our Impact</h4>
+                      <p>
+                        Every business we serve becomes more efficient, compliant, and profitable. We don't just provide services - 
+                        we build lasting partnerships that contribute to Nigeria's economic growth and development.
+                      </p>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.7 }}
+                      className="bg-white rounded-xl p-6 shadow-md"
+                    >
+                      <h4 className="text-xl font-bold text-accent-600 mb-3">🤝 Our Commitment</h4>
+                      <p>
+                        We're committed to excellence, integrity, and innovation. Every solution we provide is tailored to Nigerian business needs, 
+                        ensuring compliance with local regulations while driving sustainable growth.
+                      </p>
+                    </motion.div>
+                  </div>
                 </motion.div>
               </div>
             </motion.div>
@@ -341,50 +427,6 @@ export default function AboutUs() {
                     <p className="text-gray-700 leading-relaxed italic">"{testimonial.text}"</p>
                   </motion.div>
                 ))}
-              </div>
-            </motion.div>
-          )}
-
-          {activeTab === 'partners' && (
-            <motion.div
-              key="partners"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="max-w-4xl mx-auto">
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className="text-center text-gray-600 mb-12 text-lg"
-                >
-                  We partner with industry-leading organizations to deliver the best service to our clients
-                </motion.p>
-
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                  {partners.map((partner, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: index * 0.1 }}
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all text-center border border-gray-100"
-                    >
-                      <motion.div
-                        animate={{ y: [0, -10, 0] }}
-                        transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
-                        className="text-5xl mb-3"
-                      >
-                        {partner.logo}
-                      </motion.div>
-                      <h4 className="font-bold text-gray-900 mb-1">{partner.name}</h4>
-                      <p className="text-sm text-gray-600">{partner.description}</p>
-                    </motion.div>
-                  ))}
-                </div>
               </div>
             </motion.div>
           )}

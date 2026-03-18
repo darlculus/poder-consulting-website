@@ -9,44 +9,44 @@ export default function FAQs() {
 
   const faqs = [
     {
-      question: 'How much does a tax return cost?',
-      answer: 'Our standard tax return service starts at £130, which includes everything you need: dedicated tax specialist, document review, HMRC submission, and ongoing support. We offer transparent, fixed pricing with no hidden fees. Additional services like Capital Gains Tax reports (£99) and UTR registration (£25) are available separately.',
+      question: 'What business services do you offer?',
+      answer: 'We provide comprehensive business solutions including accounting services, tax compliance, payroll management, ERP implementation, financial advisory, and corporate services. Our team specializes in Nigerian business regulations including NRS compliance, PAYE, NHF, NSITF, ITF, and PENCOM requirements.',
     },
     {
-      question: 'How long does the tax filing process take?',
-      answer: 'Our typical turnaround time is 48 hours from when we receive all your documents. However, this can vary depending on the complexity of your tax situation. For urgent cases, we offer expedited services. You can track your progress in real-time through your personal dashboard.',
+      question: 'How do you ensure NRS compliance?',
+      answer: 'Our team stays updated with all Nigeria Revenue Service regulations and requirements. We ensure your business meets all tax obligations, from corporate tax filing to VAT returns. We handle all NRS submissions and maintain ongoing compliance monitoring to keep your business in good standing.',
     },
     {
-      question: 'What documents do I need to provide?',
-      answer: 'The documents required depend on your income sources. Generally, you\'ll need: P60/P45 forms, bank statements, invoices for self-employment income, rental income records, investment statements, and receipts for allowable expenses. Our team will provide you with a personalized checklist based on your specific situation.',
+      question: 'Can you help with payroll and statutory deductions?',
+      answer: 'Absolutely! We manage complete payroll processing including PAYE calculations, NHF (National Housing Fund), NSITF (Nigeria Social Insurance Trust Fund), ITF (Industrial Training Fund), and PENCOM contributions. We ensure accurate calculations and timely remittances to all relevant agencies.',
     },
     {
-      question: 'Are you HMRC registered and compliant?',
-      answer: 'Yes, absolutely! Poder Consulting is fully registered with HMRC and all our tax specialists are qualified accountants. We follow all HMRC guidelines and regulations to ensure your tax return is 100% compliant. We also carry professional indemnity insurance for your peace of mind.',
+      question: 'Do you assist with business registration and setup?',
+      answer: 'Yes, we provide full corporate services including company registration with CAC (Corporate Affairs Commission), tax registration with NRS, and all necessary business permits. We guide you through the entire setup process and ensure compliance with all regulatory requirements.',
     },
     {
-      question: 'Can you help with previous tax years?',
-      answer: 'Yes, we can help you file tax returns for previous years. If you\'ve missed deadlines, we can also assist with penalty appeals and negotiations with HMRC. Our team has extensive experience handling backdated returns and resolving tax issues.',
+      question: 'What accounting software do you work with?',
+      answer: 'We work with various accounting platforms including QuickBooks, Xero, and other ERP solutions. We can help implement the right system for your business size and needs, provide training, and ensure seamless integration with your existing processes.',
     },
     {
-      question: 'What if I make a mistake or need to amend my return?',
-      answer: 'Don\'t worry! If you need to amend your tax return after submission, we\'ll help you file an amendment with HMRC at no extra cost (within the first year). Our thorough review process minimizes errors, but we\'re here to support you if any changes are needed.',
+      question: 'How do you handle financial reporting and audits?',
+      answer: 'We prepare comprehensive financial statements, management reports, and audit-ready documentation. Our team ensures your books are properly maintained and can assist with audit preparation, working closely with external auditors when required.',
     },
     {
-      question: 'Do you offer support after filing?',
-      answer: 'Yes! Our service includes ongoing support even after your return is filed. If HMRC has questions or you receive correspondence, we\'ll handle it for you. You also get access to your dedicated tax specialist for any tax-related queries throughout the year.',
+      question: 'Can you help with tax planning and advisory?',
+      answer: 'Yes! We provide strategic tax planning to optimize your tax position legally. Our advisory services include cash flow management, investment planning, and growth strategies tailored to Nigerian business environment and regulations.',
     },
     {
-      question: 'How secure is my personal information?',
-      answer: 'We take data security extremely seriously. All your information is encrypted with bank-level 256-bit encryption. We use secure servers, comply with GDPR regulations, and never share your data with third parties. Our systems are regularly audited for security compliance.',
+      question: 'How secure is our business information?',
+      answer: 'We take data security extremely seriously. All your information is encrypted with bank-level security. We use secure servers, comply with data protection regulations, and never share your information with unauthorized parties. Our systems are regularly audited for security compliance.',
     },
     {
-      question: 'Can I track my tax return progress?',
-      answer: 'Absolutely! You\'ll have access to a personal dashboard where you can track your tax return status in real-time, upload documents, communicate with your tax specialist, and view all your tax history. You\'ll also receive email notifications at each stage of the process.',
+      question: 'Do you provide ongoing support after setup?',
+      answer: 'Absolutely! We believe in building long-term partnerships. After initial setup, we provide ongoing support, regular check-ins, compliance monitoring, and are always available for business queries. You get dedicated support throughout your business journey.',
     },
     {
-      question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit and debit cards, bank transfers, and digital payment methods including Apple Pay and Google Pay. Payment is only required after you\'ve reviewed and approved your tax return. We also offer payment plans for larger amounts.',
+      question: 'How do we get started with your services?',
+      answer: 'Getting started is simple! Contact us for a free consultation where we assess your business needs. We then create a customized service plan and begin implementation. Our onboarding process is designed to be smooth and efficient with minimal disruption to your operations.',
     },
   ]
 

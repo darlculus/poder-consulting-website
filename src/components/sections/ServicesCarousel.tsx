@@ -1,38 +1,46 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FileText, Stethoscope, TrendingUp, FileCheck, ArrowRight } from 'lucide-react'
+import { Calculator, FileText, Users, Settings, TrendingUp, Building2, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 export default function ServicesCarousel() {
   const services = [
     {
-      icon: FileText,
-      title: 'Tax Return Preparation',
-      price: '£130',
-      description: 'Complete tax return filing with expert review and HMRC submission',
-      features: ['Dedicated specialist', 'Document review', 'HMRC filing', 'Support included'],
+      icon: Calculator,
+      title: 'Accounting Services',
+      description: 'Complete bookkeeping, financial statements, and accounting management for your business',
+      features: ['Monthly bookkeeping', 'Financial statements', 'Account reconciliation', 'Audit preparation'],
     },
     {
-      icon: Stethoscope,
-      title: 'Tax Health Check',
-      price: '£99',
-      description: 'Comprehensive review of your tax situation with expert recommendations',
-      features: ['Full tax review', 'Optimization tips', '60-min consultation', 'Action plan'],
+      icon: FileText,
+      title: 'Tax Compliance',
+      description: 'NRS-compliant tax filing, VAT returns, and comprehensive tax advisory services',
+      features: ['Corporate tax filing', 'VAT returns', 'PAYE compliance', 'Tax advisory'],
+    },
+    {
+      icon: Users,
+      title: 'Payroll Management',
+      description: 'Complete payroll processing including PAYE, NHF, NSITF, ITF, and PENCOM contributions',
+      features: ['Monthly payroll', 'PAYE calculations', 'Statutory deductions', 'Payroll reports'],
+    },
+    {
+      icon: Settings,
+      title: 'ERP Solutions',
+      description: 'Enterprise resource planning implementation and management for business efficiency',
+      features: ['ERP implementation', 'System integration', 'Process automation', 'Training & support'],
     },
     {
       icon: TrendingUp,
-      title: 'Capital Gains Report',
-      price: '£99',
-      description: '60-day CGT report for property and investment transactions',
-      features: ['CGT calculation', 'HMRC compliant', 'Fast delivery', 'Expert support'],
+      title: 'Financial Advisory',
+      description: 'Strategic financial planning, investment advice, and business growth consulting',
+      features: ['Financial planning', 'Investment advisory', 'Cash flow management', 'Growth strategies'],
     },
     {
-      icon: FileCheck,
-      title: 'UTR Registration',
-      price: '£25',
-      description: 'Quick and easy Unique Taxpayer Reference registration service',
-      features: ['Fast processing', 'HMRC submission', 'Confirmation', 'Follow-up support'],
+      icon: Building2,
+      title: 'Corporate Services',
+      description: 'Business registration, compliance management, and corporate governance support',
+      features: ['Company registration', 'Compliance monitoring', 'Corporate governance', 'Legal documentation'],
     },
   ]
 
@@ -46,13 +54,13 @@ export default function ServicesCarousel() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4">Our Services</h2>
+          <h2 className="text-4xl font-bold mb-4">Our Business Services</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Transparent pricing, expert service. Choose what you need, pay only for what you use.
+            Comprehensive business solutions tailored for Nigerian enterprises. Expert service, transparent approach.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -66,8 +74,7 @@ export default function ServicesCarousel() {
                 <service.icon className="text-primary-600" size={28} />
               </div>
               
-              <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-              <div className="text-3xl font-bold text-primary-600 mb-3">{service.price}</div>
+              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
               
               <ul className="space-y-2 mb-6">
@@ -80,10 +87,10 @@ export default function ServicesCarousel() {
               </ul>
 
               <Link
-                href="#signup"
+                href="#contact"
                 className="flex items-center justify-center gap-2 w-full py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors group-hover:gap-3"
               >
-                Get Started
+                Learn More
                 <ArrowRight size={16} />
               </Link>
             </motion.div>

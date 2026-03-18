@@ -5,12 +5,12 @@ import { Check, X } from 'lucide-react'
 
 export default function Comparison() {
   const features = [
-    { name: 'Fixed Transparent Pricing', poder: true, others: false },
-    { name: 'Dedicated Tax Specialist', poder: true, others: false },
-    { name: 'Real-time Dashboard', poder: true, others: true },
-    { name: '48-Hour Turnaround', poder: true, others: false },
-    { name: 'Unlimited Support', poder: true, others: false },
-    { name: 'HMRC Compliance Guarantee', poder: true, others: true },
+    { name: 'Comprehensive Business Solutions', poder: true, others: false },
+    { name: 'Dedicated Business Consultant', poder: true, others: false },
+    { name: 'NRS Compliance Expertise', poder: true, others: true },
+    { name: 'Payroll & Statutory Management', poder: true, others: false },
+    { name: 'Ongoing Business Support', poder: true, others: false },
+    { name: 'ERP Implementation', poder: true, others: false },
   ]
 
   return (
@@ -25,7 +25,7 @@ export default function Comparison() {
         >
           <h2 className="text-4xl font-bold mb-4">Why Choose Poder Consulting?</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            See how we compare to other tax services
+            See how we compare to other business consulting services
           </p>
         </motion.div>
 

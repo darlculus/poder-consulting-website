@@ -6,9 +6,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
 
 export const metadata: Metadata = {
-  title: 'Poder Consulting - Expert Tax Services Made Simple',
-  description: 'Professional tax consulting services with transparent pricing. HMRC compliant, secure, and stress-free tax filing for individuals and businesses.',
-  keywords: 'tax consulting, tax services, HMRC, tax filing, accountant',
+  title: 'Poder Consulting - Expert Business Solutions for Nigerian Enterprises',
+  description: 'Professional business consulting services including accounting, tax compliance, payroll, and ERP solutions. NRS compliant and tailored for Nigerian businesses.',
+  keywords: 'business consulting, accounting services, tax compliance, payroll management, ERP solutions, NRS, Nigerian business, PAYE, corporate services',
 }
 
 export default function RootLayout({

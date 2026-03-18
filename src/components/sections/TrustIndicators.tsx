@@ -5,8 +5,8 @@ import { Shield, Clock, Award, Lock } from 'lucide-react'
 
 export default function TrustIndicators() {
   const indicators = [
-    { icon: Shield, label: 'HMRC Compliant', value: '100%' },
-    { icon: Clock, label: 'Average Turnaround', value: '48hrs' },
+    { icon: Shield, label: 'NRS Compliant', value: '100%' },
+    { icon: Clock, label: 'Business Experience', value: '8+ Years' },
     { icon: Award, label: 'Client Rating', value: '4.9/5' },
     { icon: Lock, label: 'Bank-Level Security', value: '256-bit' },
   ]

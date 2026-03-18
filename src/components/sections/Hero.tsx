@@ -13,26 +13,26 @@ export default function Hero({}: HeroProps = {}) {
   const slides = [
     {
       type: 'static',
-      title: 'Tax Filing Made',
-      highlight: 'Simple & Stress-Free',
-      description: 'Professional tax services with transparent pricing. No hidden fees, no surprises. Just expert guidance from start to finish.',
-      features: ['Fixed Pricing', 'Expert Support', 'Fast Turnaround'],
+      title: 'Business Growth Made',
+      highlight: 'Simple & Strategic',
+      description: 'Professional business consulting services with transparent approach. Expert guidance for accounting, tax compliance, payroll, and ERP solutions.',
+      features: ['Expert Consultation', 'NRS Compliant', 'Full Business Support'],
     },
     {
       type: 'video',
       title: 'Your Trusted',
-      highlight: 'Tax Partner',
-      description: 'Join thousands of satisfied clients who trust us with their taxes. HMRC compliant and secure.',
-      features: ['20,000+ Returns Filed', '4.9★ Rating', 'Bank-Level Security'],
-      videoUrl: '/videos/hero-video.mp4', // You'll need to add this
+      highlight: 'Business Partner',
+      description: 'Join hundreds of satisfied businesses who trust us with their growth. NRS compliant and secure business solutions.',
+      features: ['500+ Businesses Served', '4.9★ Rating', 'Bank-Level Security'],
+      videoUrl: '/videos/hero-video.mp4',
     },
     {
       type: 'gif',
-      title: 'Get Started',
-      highlight: 'In Minutes',
-      description: 'Simple online process. Upload documents, get expert review, and submit to HMRC - all from your dashboard.',
-      features: ['Quick Setup', 'Real-time Updates', 'Dedicated Specialist'],
-      gifUrl: '/images/hero-animation.gif', // You'll need to add this
+      title: 'Transform Your',
+      highlight: 'Business Today',
+      description: 'Comprehensive business solutions. From accounting setup to tax compliance - all managed by our expert team.',
+      features: ['Quick Onboarding', 'Real-time Support', 'Dedicated Specialist'],
+      gifUrl: '/images/Tax Filing.gif',
     },
   ]
 
@@ -90,7 +90,7 @@ export default function Hero({}: HeroProps = {}) {
                 transition={{ delay: 0.2 }}
                 className="inline-block mb-4 px-4 py-2 bg-primary-100 rounded-full"
               >
-                <span className="text-primary-700 font-semibold text-sm">🎉 HMRC Compliant & Trusted</span>
+                <span className="text-primary-700 font-semibold text-sm">🎉 NRS Compliant & Trusted</span>
               </motion.div>
               
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -152,20 +152,20 @@ export default function Hero({}: HeroProps = {}) {
                   className="relative z-10 bg-white rounded-2xl shadow-2xl p-8 border border-gray-100"
                 >
                   <div className="mb-6">
-                    <div className="text-sm text-gray-500 mb-2">Starting from</div>
+                    <div className="text-sm text-gray-500 mb-2">Professional Services</div>
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: 0.3, type: "spring" }}
-                      className="text-5xl font-bold text-primary-600 mb-2"
+                      className="text-3xl font-bold text-primary-600 mb-2"
                     >
-                      £130
+                      Business Solutions
                     </motion.div>
-                    <div className="text-gray-600">All-inclusive tax return</div>
+                    <div className="text-gray-600">Comprehensive consulting services</div>
                   </div>
                   
                   <div className="space-y-4 mb-6">
-                    {['Dedicated tax specialist', 'Document review & filing', 'HMRC submission', 'Ongoing support'].map((item, i) => (
+                    {['Dedicated business consultant', 'Accounting & tax compliance', 'NRS submission support', 'Ongoing business guidance'].map((item, i) => (
                       <motion.div
                         key={i}
                         initial={{ opacity: 0, x: -20 }}
@@ -188,9 +188,9 @@ export default function Hero({}: HeroProps = {}) {
                           transition={{ delay: 0.8 }}
                           className="text-2xl font-bold text-gray-900"
                         >
-                          20,000+
+                          500+
                         </motion.div>
-                        <div className="text-sm text-gray-600">Returns Filed</div>
+                        <div className="text-sm text-gray-600">Businesses Served</div>
                       </div>
                       <div className="border-l border-gray-300 h-12"></div>
                       <div>

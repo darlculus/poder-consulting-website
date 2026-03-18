@@ -23,8 +23,8 @@ export default function Navbar({}: NavbarProps = {}) {
     { name: 'Home', href: '#home' },
     { name: 'About Us', href: '#about' },
     { name: 'Our Services', href: '#services' },
-    { name: 'How It Works', href: '#how-it-works' },
-    { name: 'Who We Help', href: '#who-we-help' },
+    { name: 'How We Work', href: '#how-it-works' },
+    { name: 'Who We Serve', href: '#who-we-help' },
     { name: 'FAQs', href: '#faqs' },
   ]
 

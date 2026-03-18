@@ -7,23 +7,23 @@ export default function HowItWorks() {
   const steps = [
     {
       icon: MessageSquare,
-      title: 'Tell Us About Your Income',
-      description: 'Share your income details through our simple online form. Takes just 5 minutes.',
+      title: 'Business Consultation',
+      description: 'Free consultation to understand your business needs and challenges.',
     },
     {
       icon: Upload,
-      title: 'Upload Your Documents',
-      description: 'Securely upload your tax documents. We accept all common formats.',
+      title: 'Assessment & Planning',
+      description: 'We assess your current setup and create a customized service plan.',
     },
     {
       icon: FileCheck,
-      title: 'Expert Review & Preparation',
-      description: 'Your dedicated tax specialist reviews and prepares your return with care.',
+      title: 'Implementation',
+      description: 'Our experts implement solutions with minimal disruption to your operations.',
     },
     {
       icon: CreditCard,
-      title: 'Approve & Submit',
-      description: 'Review your return, approve it, and we submit directly to HMRC.',
+      title: 'Ongoing Support',
+      description: 'Continuous support and monitoring to ensure your business stays compliant.',
     },
   ]
 
@@ -37,9 +37,9 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">How It Works</h2>
+          <h2 className="text-4xl font-bold mb-4">How We Work</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Four simple steps to stress-free tax filing
+            Four simple steps to transform your business operations
           </p>
         </motion.div>
 
