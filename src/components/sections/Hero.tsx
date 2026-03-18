@@ -24,15 +24,15 @@ export default function Hero({}: HeroProps = {}) {
       highlight: 'Business Partner',
       description: 'Join hundreds of satisfied businesses who trust us with their growth. NRS compliant and secure business solutions.',
       features: ['500+ Businesses Served', '4.9★ Rating', 'Bank-Level Security'],
-      videoUrl: '/videos/hero-video.mp4',
+      videoUrl: '/videos/tax1.mp4',
     },
     {
-      type: 'gif',
+      type: 'video',
       title: 'Transform Your',
       highlight: 'Business Today',
       description: 'Comprehensive business solutions. From accounting setup to tax compliance - all managed by our expert team.',
       features: ['Quick Onboarding', 'Real-time Support', 'Dedicated Specialist'],
-      gifUrl: '/images/Tax Filing.gif',
+      videoUrl: '/videos/tax2.mp4',
     },
   ]
 
@@ -74,6 +74,32 @@ export default function Hero({}: HeroProps = {}) {
         className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-accent-200 to-primary-200 rounded-full blur-3xl opacity-20"
       />
 
+      {/* Video Background for video slides */}
+      <AnimatePresence>
+        {slides[currentSlide].type === 'video' && (
+          <motion.div
+            key={`video-bg-${currentSlide}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="absolute inset-0 z-0"
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src={slides[currentSlide].videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <AnimatePresence mode="wait">
@@ -93,14 +119,22 @@ export default function Hero({}: HeroProps = {}) {
                 <span className="text-primary-700 font-semibold text-sm">🎉 NRS Compliant & Trusted</span>
               </motion.div>
               
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className={`text-5xl lg:text-6xl font-bold mb-6 leading-tight ${
+                slides[currentSlide].type === 'video' ? 'text-white' : 'text-gray-900'
+              }`}>
                 {slides[currentSlide].title}{' '}
-                <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+                <span className={`bg-gradient-to-r ${
+                  slides[currentSlide].type === 'video' 
+                    ? 'from-accent-300 to-accent-400 text-accent-300' 
+                    : 'from-primary-600 to-accent-600'
+                } bg-clip-text text-transparent`}>
                   {slides[currentSlide].highlight}
                 </span>
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8">
+              <p className={`text-xl mb-8 ${
+                slides[currentSlide].type === 'video' ? 'text-gray-200' : 'text-gray-600'
+              }`}>
                 {slides[currentSlide].description}
               </p>
 
@@ -114,7 +148,11 @@ export default function Hero({}: HeroProps = {}) {
                     <ArrowRight size={20} />
                   </motion.div>
                 </a>
-                <a href="#services" className="btn-secondary flex items-center justify-center gap-2 text-lg">
+                <a href="#services" className={`flex items-center justify-center gap-2 text-lg ${
+                  slides[currentSlide].type === 'video' 
+                    ? 'bg-white bg-opacity-20 text-white border-2 border-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-lg font-semibold transition-all'
+                    : 'btn-secondary'
+                }`}>
                   View Services
                 </a>
               </div>
@@ -128,8 +166,8 @@ export default function Hero({}: HeroProps = {}) {
                     transition={{ delay: 0.4 + i * 0.1 }}
                     className="flex items-center gap-2"
                   >
-                    <CheckCircle className="text-green-500" size={20} />
-                    <span className="text-gray-700">{feature}</span>
+                    <CheckCircle className={slides[currentSlide].type === 'video' ? 'text-accent-300' : 'text-green-500'} size={20} />
+                    <span className={slides[currentSlide].type === 'video' ? 'text-white' : 'text-gray-700'}>{feature}</span>
                   </motion.div>
                 ))}
               </div>
@@ -210,34 +248,17 @@ export default function Hero({}: HeroProps = {}) {
               )}
 
               {slides[currentSlide].type === 'video' && (
-                <div className="relative z-10 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-auto"
-                    style={{ maxHeight: '600px' }}
-                  >
-                    <source src="/videos/hero-video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                <div className="relative z-10">
+                  {/* Empty div for spacing - content is now on the left */}
                 </div>
               )}
 
-              {slides[currentSlide].type === 'gif' && (
-                <div className="relative z-10 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
-                  <img
-                    src="/images/Tax Filing.gif"
-                    alt="Tax Filing Process Animation"
-                    className="w-full h-auto"
-                    style={{ maxHeight: '600px' }}
-                  />
-                </div>
+              {slides[currentSlide].type === 'static' && (
+                <>
+                  <div className="absolute -top-6 -right-6 w-72 h-72 bg-gradient-to-br from-primary-200 to-accent-200 rounded-full blur-3xl opacity-30"></div>
+                  <div className="absolute -bottom-6 -left-6 w-72 h-72 bg-gradient-to-br from-accent-200 to-primary-200 rounded-full blur-3xl opacity-30"></div>
+                </>
               )}
-
-              <div className="absolute -top-6 -right-6 w-72 h-72 bg-gradient-to-br from-primary-200 to-accent-200 rounded-full blur-3xl opacity-30"></div>
-              <div className="absolute -bottom-6 -left-6 w-72 h-72 bg-gradient-to-br from-accent-200 to-primary-200 rounded-full blur-3xl opacity-30"></div>
             </motion.div>
           </AnimatePresence>
         </div>
@@ -246,10 +267,14 @@ export default function Hero({}: HeroProps = {}) {
         <div className="flex items-center justify-center gap-4 mt-12">
           <button
             onClick={prevSlide}
-            className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-primary-50 transition-colors"
+            className={`w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-colors ${
+              slides[currentSlide].type === 'video'
+                ? 'bg-white bg-opacity-20 text-white hover:bg-white hover:text-gray-900'
+                : 'bg-white text-primary-600 hover:bg-primary-50'
+            }`}
             aria-label="Previous slide"
           >
-            <ChevronLeft className="text-primary-600" size={24} />
+            <ChevronLeft size={24} />
           </button>
 
           <div className="flex gap-2">
@@ -258,7 +283,13 @@ export default function Hero({}: HeroProps = {}) {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'w-8 bg-primary-600' : 'w-2 bg-gray-300'
+                  index === currentSlide 
+                    ? `w-8 ${
+                        slides[currentSlide].type === 'video' ? 'bg-white' : 'bg-primary-600'
+                      }` 
+                    : `w-2 ${
+                        slides[currentSlide].type === 'video' ? 'bg-white bg-opacity-50' : 'bg-gray-300'
+                      }`
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -267,10 +298,14 @@ export default function Hero({}: HeroProps = {}) {
 
           <button
             onClick={nextSlide}
-            className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-primary-50 transition-colors"
+            className={`w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-colors ${
+              slides[currentSlide].type === 'video'
+                ? 'bg-white bg-opacity-20 text-white hover:bg-white hover:text-gray-900'
+                : 'bg-white text-primary-600 hover:bg-primary-50'
+            }`}
             aria-label="Next slide"
           >
-            <ChevronRight className="text-primary-600" size={24} />
+            <ChevronRight size={24} />
           </button>
         </div>
       </div>
