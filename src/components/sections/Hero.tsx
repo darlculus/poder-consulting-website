@@ -174,10 +174,48 @@ export default function Hero({}: HeroProps = {}) {
             >
 
 
+              {currentSlide === 0 && (
+                <motion.div
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="relative z-10 bg-white rounded-2xl shadow-2xl p-8 border border-gray-100"
+                >
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-2xl">🤝</span>
+                    <h3 className="text-xl font-bold text-gray-900">Our Promise</h3>
+                  </div>
+                  <p className="text-gray-600 mb-5 text-sm leading-relaxed">
+                    At Poder Consulting, you're never left to figure things out alone. We provide:
+                  </p>
+                  <ul className="space-y-3 mb-5">
+                    {[
+                      'Clear, jargon-free explanations',
+                      'Accurate and timely reporting',
+                      'Personalised support tailored to your business',
+                      'Consistent communication and accountability',
+                      'A partner who treats your business with the care it deserves',
+                    ].map((item, i) => (
+                      <motion.li
+                        key={i}
+                        initial={{ opacity: 0, x: -15 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.5 + i * 0.1 }}
+                        className="flex items-start gap-3"
+                      >
+                        <CheckCircle className="text-primary-600 flex-shrink-0 mt-0.5" size={18} />
+                        <span className="text-gray-700 text-sm">{item}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                  <p className="text-sm text-gray-500 italic leading-relaxed">
+                    We are committed to making your experience smooth, transparent, and empowering — because financial clarity shouldn't be complicated.
+                  </p>
+                </motion.div>
+              )}
+
               {slides[currentSlide].type === 'video' && (
-                <div className="relative z-10">
-                  {/* Empty div for spacing - content is now on the left */}
-                </div>
+                <div className="relative z-10" />
               )}
 
 
