@@ -110,14 +110,16 @@ export default function Hero({}: HeroProps = {}) {
               exit={{ opacity: 0, x: 50 }}
               transition={{ duration: 0.5 }}
             >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="inline-block mb-4 px-4 py-2 bg-primary-100 rounded-full"
-              >
-                <span className="text-primary-700 font-semibold text-sm">🎉 NRS Compliant & Trusted</span>
-              </motion.div>
+              {currentSlide === 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="inline-block mb-4 px-4 py-2 bg-primary-100 rounded-full"
+                >
+                  <span className="text-primary-700 font-semibold text-sm">🎉 NRS Compliant & Trusted</span>
+                </motion.div>
+              )}
               
               <h1 className={`text-5xl lg:text-6xl font-bold mb-6 leading-tight ${
                 slides[currentSlide].type === 'video' ? 'text-white' : 'text-gray-900'
@@ -183,69 +185,7 @@ export default function Hero({}: HeroProps = {}) {
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              {slides[currentSlide].type === 'static' && (
-                <motion.div
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative z-10 bg-white rounded-2xl shadow-2xl p-8 border border-gray-100"
-                >
-                  <div className="mb-6">
-                    <div className="text-sm text-gray-500 mb-2">Professional Services</div>
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 0.3, type: "spring" }}
-                      className="text-3xl font-bold text-primary-600 mb-2"
-                    >
-                      Business Solutions
-                    </motion.div>
-                    <div className="text-gray-600">Comprehensive consulting services</div>
-                  </div>
-                  
-                  <div className="space-y-4 mb-6">
-                    {['Dedicated business consultant', 'Accounting & tax compliance', 'NRS submission support', 'Ongoing business guidance'].map((item, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.5 + i * 0.1 }}
-                        className="flex items-center gap-3"
-                      >
-                        <CheckCircle className="text-primary-600 flex-shrink-0" size={20} />
-                        <span className="text-gray-700">{item}</span>
-                      </motion.div>
-                    ))}
-                  </div>
 
-                  <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-lg p-4">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ delay: 0.8 }}
-                          className="text-2xl font-bold text-gray-900"
-                        >
-                          500+
-                        </motion.div>
-                        <div className="text-sm text-gray-600">Businesses Served</div>
-                      </div>
-                      <div className="border-l border-gray-300 h-12"></div>
-                      <div>
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ delay: 1 }}
-                          className="text-2xl font-bold text-gray-900"
-                        >
-                          4.9★
-                        </motion.div>
-                        <div className="text-sm text-gray-600">Client Rating</div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
 
               {slides[currentSlide].type === 'video' && (
                 <div className="relative z-10">
@@ -253,12 +193,7 @@ export default function Hero({}: HeroProps = {}) {
                 </div>
               )}
 
-              {slides[currentSlide].type === 'static' && (
-                <>
-                  <div className="absolute -top-6 -right-6 w-72 h-72 bg-gradient-to-br from-primary-200 to-accent-200 rounded-full blur-3xl opacity-30"></div>
-                  <div className="absolute -bottom-6 -left-6 w-72 h-72 bg-gradient-to-br from-accent-200 to-primary-200 rounded-full blur-3xl opacity-30"></div>
-                </>
-              )}
+
             </motion.div>
           </AnimatePresence>
         </div>
