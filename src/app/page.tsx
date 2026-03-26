@@ -7,7 +7,6 @@ import AboutUs from '@/components/sections/AboutUs'
 import ServicesCarousel from '@/components/sections/ServicesCarousel'
 import HowItWorks from '@/components/sections/HowItWorks'
 import Values from '@/components/sections/Values'
-import Comparison from '@/components/sections/Comparison'
 import TargetUsers from '@/components/sections/TargetUsers'
 import FAQs from '@/components/sections/FAQs'
 import ContactForm from '@/components/sections/ContactForm'
@@ -27,7 +26,6 @@ export default function Home() {
         <ServicesCarousel />
         <HowItWorks />
         <Values />
-        <Comparison />
         <TargetUsers />
         <FAQs />
         <ContactForm />
