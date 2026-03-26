@@ -2,8 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Building2, Users, Award, TrendingUp, CheckCircle, Star, Quote } from 'lucide-react'
-import Image from 'next/image'
+import { Building2, Users, TrendingUp, CheckCircle, Star, Quote } from 'lucide-react'
 
 export default function AboutUs() {
   const [activeTab, setActiveTab] = useState('overview')
@@ -15,14 +14,7 @@ export default function AboutUs() {
     { id: 'testimonials', label: 'Testimonials', icon: Star },
   ]
 
-  const stats = [
-    { number: '500+', label: 'Businesses Served', icon: TrendingUp },
-    { number: '8+', label: 'Years Experience', icon: Award },
-    { number: '4.9/5', label: 'Client Rating', icon: Star },
-    { number: '98%', label: 'Success Rate', icon: CheckCircle },
-  ]
-
-  const clientTypes = [
+const clientTypes = [
     {
       icon: '🏢',
       title: 'Small & Medium Enterprises',
@@ -87,77 +79,7 @@ export default function AboutUs() {
 
   return (
     <section id="about" className="py-20 bg-white relative overflow-hidden">
-      {/* Animated background elements */}
-      <motion.div
-        animate={{
-          x: [0, 100, 0],
-          y: [0, -50, 0],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary-100 to-accent-100 rounded-full blur-3xl opacity-30"
-      />
-
       <div className="container-custom relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <motion.h2
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-4"
-          >
-            About{' '}
-            <span className="font-serif bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-              PODER CONSULTING
-            </span>
-          </motion.h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Your trusted partner in business excellence, empowering Nigerian enterprises with comprehensive solutions
-          </p>
-        </motion.div>
-
-        {/* Animated Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-xl p-6 text-center shadow-lg hover:shadow-2xl transition-all"
-            >
-              <motion.div
-                animate={{ rotate: [0, 360] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                className="w-12 h-12 bg-gradient-to-br from-primary-600 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-4"
-              >
-                <stat.icon className="text-white" size={24} />
-              </motion.div>
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-                viewport={{ once: true }}
-                className="text-3xl font-bold text-gray-900 mb-2"
-              >
-                {stat.number}
-              </motion.div>
-              <div className="text-sm text-gray-600">{stat.label}</div>
-            </motion.div>
-          ))}
-        </div>
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -197,7 +119,7 @@ export default function AboutUs() {
                   transition={{ delay: 0.2 }}
                   className="text-3xl font-bold mb-6"
                 >
-                  Who We Are
+                  About Us
                 </motion.h3>
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -205,17 +127,10 @@ export default function AboutUs() {
                   transition={{ delay: 0.3 }}
                   className="space-y-4 text-gray-700 leading-relaxed"
                 >
-                  <p className="text-lg">
-                    <strong className="text-primary-600">Poder Consulting</strong> is a leading business consultancy firm dedicated to empowering 
-                    Nigerian enterprises with comprehensive accounting, tax compliance, payroll, and ERP solutions.
+                  <p className="text-base">At <strong className="text-primary-600">Poder Consulting</strong>, we believe that managing your finances, taxes, systems, and statutory obligations should never feel overwhelming. Businesses deserve clarity, confidence, and a partner who makes compliance and financial operations seamless — not stressful. That's exactly why we exist.
                   </p>
                   <p>
-                    With over 8 years of experience and a team of NRS-compliant specialists, we've helped over 500 businesses 
-                    navigate the complexities of Nigerian business regulations with confidence and strategic insight.
-                  </p>
-                  <p>
-                    Our mission is to provide exceptional business services that combine expert knowledge with innovative solutions, 
-                    delivering seamless experiences that drive business growth and compliance.
+                    As a proudly Nigerian owned consulting firm, we support organisations across industries with end to end accounting solutions, financial advisory, tax compliance, business process improvement, ERP implementation, and payroll services. Our mission is simple: to empower you to run your business with precision, compliance, and peace of mind.
                   </p>
                 </motion.div>
 
@@ -254,78 +169,80 @@ export default function AboutUs() {
               transition={{ duration: 0.5 }}
               className="max-w-4xl mx-auto"
             >
-              <div className="bg-gradient-to-br from-accent-50 to-primary-50 rounded-2xl p-8 md:p-12 shadow-xl">
+              <div className="bg-gradient-to-br from-accent-50 to-primary-50 rounded-2xl p-8 md:p-12 shadow-xl space-y-8">
                 <motion.h3
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="text-3xl font-bold mb-6 text-center"
+                  className="text-3xl font-bold"
                 >
                   Why We Exist
                 </motion.h3>
-                <motion.div
+
+                <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
-                  className="space-y-6 text-gray-700 leading-relaxed"
+                  className="text-base text-gray-700 leading-relaxed"
                 >
-                  <p className="text-lg text-center mb-8">
-                    <strong className="text-primary-600">We exist to bridge the gap between business ambition and regulatory compliance in Nigeria.</strong>
+                  Every business — whether a growing startup or an established enterprise — faces the same challenges:
+                </motion.p>
+
+                <motion.ul
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                  className="space-y-3"
+                >
+                  {[
+                    'Navigating regulatory complexity',
+                    'Maintaining accurate financial records',
+                    'Meeting NRS, VAT, WHT, PAYE and statutory deadlines',
+                    'Sustaining efficient, well-designed operational systems',
+                  ].map((item, i) => (
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.45 + i * 0.1 }}
+                      className="flex items-start gap-3"
+                    >
+                      <span className="mt-1 w-6 h-6 rounded-full bg-gradient-to-br from-primary-600 to-accent-600 flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="text-white" size={14} />
+                      </span>
+                      <span className="text-base text-gray-700">{item}</span>
+                    </motion.li>
+                  ))}
+                </motion.ul>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.9 }}
+                  className="bg-white rounded-xl p-6 shadow-md border-l-4 border-primary-600"
+                >
+                  <p className="text-base text-gray-700 leading-relaxed">These challenges can slow you down. But with the right partner, they don't have to.
                   </p>
-                  
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.4 }}
-                      className="bg-white rounded-xl p-6 shadow-md"
-                    >
-                      <h4 className="text-xl font-bold text-primary-600 mb-3">🎯 Our Purpose</h4>
-                      <p>
-                        Many Nigerian businesses struggle with complex regulatory requirements, from PAYE calculations to NRS compliance. 
-                        We simplify these challenges, allowing entrepreneurs to focus on what they do best - growing their businesses.
-                      </p>
-                    </motion.div>
+                </motion.div>
 
-                    <motion.div
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.5 }}
-                      className="bg-white rounded-xl p-6 shadow-md"
-                    >
-                      <h4 className="text-xl font-bold text-accent-600 mb-3">🚀 Our Vision</h4>
-                      <p>
-                        To be Nigeria's most trusted business partner, empowering every enterprise - from startups to established companies - 
-                        with the tools, knowledge, and support needed to thrive in today's competitive landscape.
-                      </p>
-                    </motion.div>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.0 }}
+                  className="text-base text-gray-700 leading-relaxed"
+                >
+                  <strong className="text-primary-600">Poder Consulting</strong> was established to give businesses a smooth, reliable and personalised way to manage their financial and compliance obligations. Unlike large institutions that focus on volume, we focus on <em>you</em> — your structure, your industry, your pain points, and your goals.
+                </motion.p>
 
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.6 }}
-                      className="bg-white rounded-xl p-6 shadow-md"
-                    >
-                      <h4 className="text-xl font-bold text-primary-600 mb-3">💡 Our Impact</h4>
-                      <p>
-                        Every business we serve becomes more efficient, compliant, and profitable. We don't just provide services - 
-                        we build lasting partnerships that contribute to Nigeria's economic growth and development.
-                      </p>
-                    </motion.div>
-
-                    <motion.div
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.7 }}
-                      className="bg-white rounded-xl p-6 shadow-md"
-                    >
-                      <h4 className="text-xl font-bold text-accent-600 mb-3">🤝 Our Commitment</h4>
-                      <p>
-                        We're committed to excellence, integrity, and innovation. Every solution we provide is tailored to Nigerian business needs, 
-                        ensuring compliance with local regulations while driving sustainable growth.
-                      </p>
-                    </motion.div>
-                  </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.1 }}
+                  className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-xl p-6 text-white"
+                >
+                  <p className="text-base font-semibold leading-relaxed">
+                    We take the complexity off your shoulders, allowing you to focus on what truly matters: <span className="underline decoration-white/60">growing your business.</span>
+                  </p>
                 </motion.div>
               </div>
             </motion.div>
