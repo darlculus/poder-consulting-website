@@ -6,7 +6,6 @@ import Hero from '@/components/sections/Hero'
 import AboutUs from '@/components/sections/AboutUs'
 import ServicesCarousel from '@/components/sections/ServicesCarousel'
 import HowItWorks from '@/components/sections/HowItWorks'
-import Values from '@/components/sections/Values'
 import TargetUsers from '@/components/sections/TargetUsers'
 import FAQs from '@/components/sections/FAQs'
 import ContactForm from '@/components/sections/ContactForm'
@@ -25,7 +24,6 @@ export default function Home() {
         <AboutUs />
         <ServicesCarousel />
         <HowItWorks />
-        <Values />
         <TargetUsers />
         <FAQs />
         <ContactForm />
