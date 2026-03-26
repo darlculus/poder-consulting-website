@@ -159,20 +159,7 @@ export default function Hero({}: HeroProps = {}) {
                 </a>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6">
-                {slides[currentSlide].features.map((feature, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 + i * 0.1 }}
-                    className="flex items-center gap-2"
-                  >
-                    <CheckCircle className={slides[currentSlide].type === 'video' ? 'text-accent-300' : 'text-green-500'} size={20} />
-                    <span className={slides[currentSlide].type === 'video' ? 'text-white' : 'text-gray-700'}>{feature}</span>
-                  </motion.div>
-                ))}
-              </div>
+
             </motion.div>
           </AnimatePresence>
 
