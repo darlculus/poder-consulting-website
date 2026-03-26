@@ -161,30 +161,6 @@ export default function ContactForm() {
               </div>
             </motion.div>
 
-            {/* Quick Stats */}
-            <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-xl p-6 mt-8">
-              <h4 className="font-bold text-gray-900 mb-4">Why Choose Us?</h4>
-              <div className="space-y-3">
-                {[
-                  '24-hour response time',
-                  'NRS compliant specialists',
-                  '500+ businesses served',
-                  'Comprehensive solutions',
-                ].map((item, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-center gap-2"
-                  >
-                    <CheckCircle className="text-green-500 flex-shrink-0" size={20} />
-                    <span className="text-gray-700">{item}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
           {/* Contact Form */}

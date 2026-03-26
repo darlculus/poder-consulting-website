@@ -5,14 +5,7 @@ import Image from 'next/image'
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
 
 export default function Footer() {
-  const services = [
-    'Accounting Services',
-    'Tax Compliance', 
-    'Payroll Management',
-    'ERP Solutions',
-  ]
-
-  const quickLinks = [
+const quickLinks = [
     'About Us',
     'Our Services',
     'How We Work',
@@ -29,7 +22,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-gray-900 text-gray-300">
       <div className="container-custom py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <Image
@@ -62,19 +55,6 @@ export default function Footer() {
                 <span>Lagos, Nigeria</span>
               </div>
             </div>
-          </div>
-
-          <div>
-            <h3 className="text-white font-bold mb-4">Services</h3>
-            <ul className="space-y-2">
-              {services.map((service, i) => (
-                <li key={i}>
-                  <Link href="#services" className="hover:text-white transition-colors">
-                    {service}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           <div>
