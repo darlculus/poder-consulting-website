@@ -24,7 +24,6 @@ export default function Navbar({}: NavbarProps = {}) {
     { name: 'About Us', href: '#about' },
     { name: 'Our Services', href: '#services' },
     { name: 'How We Work', href: '#how-it-works' },
-    { name: 'Who We Serve', href: '#who-we-help' },
     { name: 'FAQs', href: '#faqs' },
   ]
 
