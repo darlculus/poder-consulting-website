@@ -350,9 +350,157 @@ const taxItems: TaxItem[] = [
       },
     ],
   },
-  { id: 4, title: 'Stamp Duties', intro: '', sections: [] },
-  { id: 5, title: 'Surcharge', intro: '', sections: [] },
-  { id: 6, title: 'Development Levy', intro: '', sections: [] },
+  {
+    id: 4,
+    title: 'Stamp Duties',
+    intro:
+      'Stamp Duties are chargeable on instruments at the rates specified in the Eighth Schedule to the Nigeria Tax Act, 2025, subject to the exemptions contained in Part III of Chapter Nine of the Act.',
+    sections: [
+      {
+        heading: 'Scope of Application',
+        content: (
+          <div className="text-sm text-gray-600 space-y-2">
+            <p>Stamp Duty applies to any instrument which is:</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>First executed in Nigeria; or</li>
+              <li>Executed outside Nigeria, but relates to any property situated in Nigeria or to any matter or thing done in Nigeria.</li>
+            </ul>
+          </div>
+        ),
+      },
+      {
+        heading: 'Key Points',
+        content: (
+          <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600">
+            {[
+              'Stamp duties apply to a wide range of instruments, including agreements, contracts, receipts, share transfers, leases, mortgages, and other legal documents.',
+              'The amount payable depends on the type and value of the document or transaction, with rates specified in the Stamp Duties Act and relevant schedules.',
+              'Stamping can be done electronically (e-stamping) or manually at designated tax offices. E-stamping is encouraged for efficiency and transparency.',
+              'Payment of stamp duties is required before certain documents can be legally enforced or admitted as evidence in court.',
+              'Failure to pay or improper stamping may result in penalties, fines, or the invalidation of the affected document.',
+            ].map((item, i) => <li key={i}>{item}</li>)}
+          </ul>
+        ),
+      },
+      {
+        heading: 'Manner of Denoting Stamp Duty',
+        content: (
+          <div className="text-sm text-gray-600 space-y-2">
+            <p>Stamp Duty may be denoted through any of the following means, as approved by the relevant tax authority:</p>
+            <ul className="list-disc pl-5 space-y-1">
+              {[
+                'Tax stamps;',
+                'Die impression;',
+                'Electronic or digital tagging;',
+                'Electronic receipt;',
+                'Issuance of a certificate; or',
+                'Any other method as may be prescribed by the relevant tax authority.',
+              ].map((item, i) => <li key={i}>{item}</li>)}
+            </ul>
+          </div>
+        ),
+      },
+      {
+        heading: 'Chargeable Instruments & Applicable Rates',
+        content: (
+          <p className="text-sm text-gray-600">Stamp Duties are payable on a wide range of chargeable instruments, either on an <strong>ad valorem</strong> or <strong>flat-rate</strong> basis, depending on the nature of the instrument, as specified in the Eighth Schedule to the Nigeria Tax Act, 2025.</p>
+        ),
+      },
+      {
+        heading: 'Exemptions',
+        content: (
+          <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600">
+            {[
+              'Transfer of shares in Government or legislative stocks or funds of Nigeria;',
+              'Instruments for the sale, transfer, or disposition of any ship or vessel, or any interest therein;',
+              'Instruments on which duty would be payable by the Nigerian Government or any of its MDAs;',
+              'Instruments executed by consular officers in the performance of official functions, where reciprocal exemptions are granted to Nigerian consular officers;',
+              'Instruments executed by or on behalf of a registered co-operative society;',
+              'Shares, stocks, or securities transferred by a lender to an approved agent or borrower in furtherance of a regulated securities lending transaction;',
+              'Shares, stocks, or securities returned to a lender or its approved agent pursuant to a regulated securities lending transaction;',
+              'Documents relating to the transfer of stocks and shares; and',
+              'Electronic transfers or receipts involving sums below \u20a610,000 (or its equivalent), including salary payments and intra-bank self-transfers.',
+            ].map((item, i) => <li key={i}>{item}</li>)}
+          </ul>
+        ),
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: 'Development Levy',
+    intro:
+      'A Development Levy at the rate of four per cent (4%) is imposed on the assessable profits of all companies chargeable to tax under Chapters Two and Three of the Nigeria Tax Act, excluding small companies and non-resident companies. This levy consolidates several previously earmarked taxes, including the NITDF Levy and the Police Trust Fund Levy, thereby streamlining compliance and administration. The levy is administered and collected by the Nigeria Revenue Service (NRS).',
+    sections: [
+      {
+        heading: 'Collection and Administration',
+        content: (
+          <div className="text-sm text-gray-600 space-y-2">
+            <p>The Development Levy shall be collected by the Service and paid into a <strong>special account</strong> created specifically for this purpose.</p>
+            <p className="bg-amber-50 border-l-4 border-amber-400 pl-3 py-2 rounded-r-lg text-amber-800">The levy does <strong>not apply</strong> to assessable profits computed for the purpose of <strong>Hydrocarbon Tax</strong>.</p>
+          </div>
+        ),
+      },
+      {
+        heading: 'Distribution of Revenue',
+        content: (
+          <div className="text-sm text-gray-600 space-y-1">
+            <p className="mb-2">Revenue from the Development Levy shall be distributed as follows:</p>
+            <div className="space-y-1">
+              {[
+                ['Tertiary Education Trust Fund (TETFund)', '50%'],
+                ['Nigerian Education Loan Fund', '15%'],
+                ['National Information Technology Development Fund (NITDF)', '8%'],
+                ['National Agency for Science and Engineering Infrastructure (NASENI)', '8%'],
+                ['National Board for Technological Incubation (NBTI)', '4%'],
+                ['Defence and Security Infrastructure Fund', '10%'],
+                ['National Cybersecurity Fund', '5%'],
+              ].map(([name, pct], i) => (
+                <div key={i} className="flex items-center justify-between py-1 border-b border-gray-100 last:border-0">
+                  <span>{name}</span>
+                  <span className="font-semibold text-primary-600 ml-4 flex-shrink-0">{pct}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ),
+      },
+      {
+        heading: 'Defence & Security Infrastructure Fund Allocation',
+        content: (
+          <div className="text-sm text-gray-600 space-y-1">
+            <p className="mb-2">The 10% allocation to the Defence and Security Infrastructure Fund is further distributed as follows:</p>
+            <div className="space-y-1">
+              {[
+                ['Defence Headquarters', '8%'],
+                ['Nigerian Army', '20%'],
+                ['Nigerian Navy', '12.5%'],
+                ['Nigerian Air Force', '12.5%'],
+                ['Office of the NSA / Counter-Terrorism Centre', '6%'],
+                ['Nigeria Police Force', '10%'],
+                ['Police Trust Fund', '8%'],
+                ['Department of State Services', '9%'],
+                ['Nigerian Security and Civil Defence Corps', '5%'],
+                ['Nigerian Forest Security Service', '5%'],
+                ['Defence Intelligence Agency', '4%'],
+              ].map(([name, pct], i) => (
+                <div key={i} className="flex items-center justify-between py-1 border-b border-gray-100 last:border-0">
+                  <span>{name}</span>
+                  <span className="font-semibold text-primary-600 ml-4 flex-shrink-0">{pct}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ),
+      },
+      {
+        heading: 'Accountability & Oversight',
+        content: (
+          <p className="text-sm text-gray-600">Each beneficiary agency and fund shall prepare and submit its income and expenditure estimates to the <strong>National Assembly for appropriation</strong>, in accordance with the law. The provisions of the Fourteenth Schedule to the Nigeria Tax Act shall apply for the purpose of further allocation and administration of the Development Levy.</p>
+        ),
+      },
+    ],
+  },
 ]
 
 const loopItems = [...taxItems, ...taxItems, ...taxItems]
