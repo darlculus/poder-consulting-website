@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Navbar from '@/components/layout/Navbar'
 import Hero from '@/components/sections/Hero'
+import TaxCarousel from '@/components/sections/TaxCarousel'
 import AboutUs from '@/components/sections/AboutUs'
 import ServicesCarousel from '@/components/sections/ServicesCarousel'
 import HowItWorks from '@/components/sections/HowItWorks'
@@ -20,6 +21,7 @@ export default function Home() {
       <main className="min-h-screen">
         <Navbar />
         <Hero />
+        <TaxCarousel />
         <AboutUs />
         <ServicesCarousel />
         <HowItWorks />
