@@ -138,10 +138,11 @@ const clientTypes = [
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="mt-8 grid md:grid-cols-3 gap-6"
+                  className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6"
                 >
                   {[
-                    { title: 'Expert Team', desc: 'NRS-compliant specialists' },
+                    { title: 'Expert Team', desc: 'Seasoned professionals with deep expertise across accounting, tax, payroll, and ERP — delivering precise, reliable solutions for every business need.' },
+                    { title: 'NRS Compliant Specialists', desc: 'Fully registered and compliant with the Nigeria Revenue Service, ensuring your filings, returns, and obligations are handled accurately and on time.' },
                     { title: 'Transparent Approach', desc: 'Clear communication, always' },
                     { title: 'Comprehensive Service', desc: 'Full business solutions' },
                   ].map((item, i) => (
