@@ -1,8 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
+import { Mail, Phone, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
 
 export default function Footer() {
 const quickLinks = [
@@ -25,34 +24,24 @@ const quickLinks = [
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
-              <Image
-                src="/images/logo1.png"
-                alt="Poder Consulting Logo"
-                width={200}
-                height={67}
-                className="h-12 w-auto brightness-0 invert"
-              />
+              <span className="text-2xl font-bold font-serif text-white uppercase tracking-wide">Poder Consulting</span>
             </Link>
             <p className="text-gray-400 mb-6 max-w-sm">
-              Professional business consulting services for Nigerian enterprises. 
+              Professional business consulting services for Nigerian enterprises.
               Comprehensive solutions for accounting, tax compliance, and business growth.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-primary-400" />
-                <a href="mailto:hello@poderconsulting.com" className="hover:text-white transition-colors">
-                  hello@poderconsulting.com
+                <a href="mailto:assist@poderconsulting-ng.com" className="hover:text-white transition-colors">
+                  assist@poderconsulting-ng.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-primary-400" />
-                <a href="tel:+2348012345678" className="hover:text-white transition-colors">
-                  +234 801 234 5678
+                <a href="tel:+2348060647049" className="hover:text-white transition-colors">
+                  +234 806 064 7049
                 </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <MapPin size={18} className="text-primary-400" />
-                <span>Lagos, Nigeria</span>
               </div>
             </div>
           </div>
@@ -76,15 +65,15 @@ const quickLinks = [
               <li>
                 <span className="text-gray-400">Email:</span>
                 <br />
-                <a href="mailto:hello@poderconsulting.com" className="hover:text-white transition-colors">
-                  hello@poderconsulting.com
+                <a href="mailto:assist@poderconsulting-ng.com" className="hover:text-white transition-colors">
+                  assist@poderconsulting-ng.com
                 </a>
               </li>
               <li>
                 <span className="text-gray-400">Phone:</span>
                 <br />
-                <a href="tel:+2348012345678" className="hover:text-white transition-colors">
-                  +234 801 234 5678
+                <a href="tel:+2348060647049" className="hover:text-white transition-colors">
+                  +234 806 064 7049
                 </a>
               </li>
             </ul>
