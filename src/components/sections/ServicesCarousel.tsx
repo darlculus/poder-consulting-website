@@ -174,7 +174,7 @@ export default function ServicesCarousel() {
                   <X size={22} />
                 </button>
               </div>
-              <div className="p-6">
+              <div className="p-6 pt-3">
                 {modalService.modalContent}
               </div>
             </motion.div>
