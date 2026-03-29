@@ -16,13 +16,10 @@ export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const services = [
-    'Accounting Services',
+    'Accounting & Financial Advisory',
     'Tax Compliance',
     'Payroll Management',
     'ERP Solutions',
-    'Financial Advisory',
-    'Corporate Services',
-    'Business Consultation',
   ]
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -266,11 +263,9 @@ export default function ContactForm() {
                   </div>
                 </div>
 
-                <motion.button
+                <button
                   type="submit"
                   disabled={isSubmitting}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                   className="w-full btn-primary flex items-center justify-center gap-2 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
@@ -288,7 +283,7 @@ export default function ContactForm() {
                       <Send size={20} />
                     </>
                   )}
-                </motion.button>
+                </button>
               </form>
             ) : (
               <motion.div
