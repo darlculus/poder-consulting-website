@@ -16,28 +16,40 @@ export default function AboutUs() {
 
 const clientTypes = [
     {
+      icon: '🎥',
+      title: 'Influencers and Content Creators',
+      subtitle: 'Including skit makers, digital creators, and online personalities',
+      description: 'We support influencers and content creators who earn income from brand deals, advertising, events, and online platforms. We help you keep accurate records, understand your tax obligations, manage cash flow, and stay compliant with Nigeria Revenue Service requirements while you focus on growing your audience and brand.',
+    },
+    {
+      icon: '🛒',
+      title: 'Online Businesses and Ecommerce Brands',
+      subtitle: '',
+      description: 'We work with online businesses selling products and services through websites, social media, and digital marketplaces. Our support covers accounting records, VAT compliance, tax filings, and system setup to ensure your financial information is accurate, structured, and ready for growth.',
+    },
+    {
+      icon: '🧑🏽\u200d💼',
+      title: 'Small and Medium Sized Businesses',
+      subtitle: '',
+      description: 'We support growing businesses across a range of industries with accounting, tax compliance, payroll, and financial advisory services. Whether you are strengthening controls, preparing reports, or meeting statutory obligations, we help you stay organised, compliant, and financially clear.',
+    },
+    {
+      icon: '🚀',
+      title: 'Startups and Early Stage Businesses',
+      subtitle: '',
+      description: 'We help new businesses set up the right financial foundations from the start. This includes accounting structure, tax registration, payroll setup, budgeting, and systems support to ensure compliance and scalability as your business grows.',
+    },
+    {
       icon: '🏢',
-      title: 'Small & Medium Enterprises',
-      description: 'Growing businesses needing comprehensive accounting and tax compliance support.',
-      count: '200+',
+      title: 'Professional Services Firms',
+      subtitle: '',
+      description: 'We work with consultants, agencies, and service based businesses that require structured financial reporting, tax compliance, payroll management, and reliable accounting systems to support day to day operations and decision making.',
     },
     {
-      icon: '🏦',
-      title: 'Startups & New Businesses',
-      description: 'New companies requiring business registration, setup, and initial compliance.',
-      count: '150+',
-    },
-    {
-      icon: '💼',
-      title: 'Professional Services',
-      description: 'Consultants, lawyers, and professionals managing their business operations.',
-      count: '100+',
-    },
-    {
-      icon: '🏭',
-      title: 'Manufacturing & Trading',
-      description: 'Companies in manufacturing and trading sectors with complex tax requirements.',
-      count: '50+',
+      icon: '🌍',
+      title: 'Nigerian Based and Diaspora Owned Businesses',
+      subtitle: '',
+      description: 'We support Nigerian businesses and diaspora entrepreneurs with operations or investments in Nigeria. Our services ensure alignment with Nigerian accounting standards, tax laws, and regulatory expectations, providing clarity and confidence regardless of location.',
     },
   ]
 
@@ -257,7 +269,7 @@ const clientTypes = [
               exit={{ opacity: 0, x: 20 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {clientTypes.map((client, index) => (
                   <motion.div
                     key={index}
@@ -267,26 +279,12 @@ const clientTypes = [
                     whileHover={{ scale: 1.03, y: -5 }}
                     className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all border border-gray-100"
                   >
-                    <motion.div
-                      animate={{ rotate: [0, 10, -10, 0] }}
-                      transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                      className="text-5xl mb-4"
-                    >
-                      {client.icon}
-                    </motion.div>
-                    <h3 className="text-xl font-bold mb-2">{client.title}</h3>
-                    <p className="text-gray-600 mb-4">{client.description}</p>
-                    <div className="flex items-center gap-2">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: '100%' }}
-                        transition={{ delay: index * 0.1 + 0.5, duration: 0.8 }}
-                        className="h-2 bg-gradient-to-r from-primary-600 to-accent-600 rounded-full"
-                      />
-                      <span className="text-sm font-semibold text-primary-600 whitespace-nowrap">
-                        {client.count} clients
-                      </span>
-                    </div>
+                    <div className="text-4xl mb-3">{client.icon}</div>
+                    <h3 className="text-lg font-bold mb-1 text-gray-900">{client.title}</h3>
+                    {client.subtitle && (
+                      <p className="text-xs text-primary-600 font-medium mb-2 italic">{client.subtitle}</p>
+                    )}
+                    <p className="text-gray-600 text-sm leading-relaxed">{client.description}</p>
                   </motion.div>
                 ))}
               </div>
