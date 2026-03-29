@@ -33,18 +33,25 @@ export default function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
 
-    console.log('Form submitted:', formData)
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      if (!res.ok) throw new Error('Failed to send')
 
-    // Reset form after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({ name: '', email: '', phone: '', service: '', message: '' })
-    }, 5000)
+      setIsSubmitted(true)
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setFormData({ name: '', email: '', phone: '', service: '', message: '' })
+      }, 5000)
+    } catch {
+      alert('Something went wrong. Please try again or email us directly at assist@poderconsulting-ng.com')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -126,8 +133,8 @@ export default function ContactForm() {
               </div>
               <div>
                 <h4 className="font-bold text-gray-900 mb-1">Email Us</h4>
-                <a href="mailto:hello@poderconsulting.com" className="text-primary-600 hover:text-primary-700">
-                  hello@poderconsulting.com
+                <a href="mailto:assist@poderconsulting-ng.com" className="text-primary-600 hover:text-primary-700">
+                  assist@poderconsulting-ng.com
                 </a>
               </div>
             </motion.div>
@@ -141,25 +148,12 @@ export default function ContactForm() {
               </div>
               <div>
                 <h4 className="font-bold text-gray-900 mb-1">Call Us</h4>
-                <a href="tel:+2348012345678" className="text-primary-600 hover:text-primary-700">
-                  +234 801 234 5678
+                <a href="tel:+2348060647049" className="text-primary-600 hover:text-primary-700">
+                  +234 806 064 7049
                 </a>
-                <p className="text-sm text-gray-500">Mon-Fri, 9am-6pm WAT</p>
               </div>
             </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.05, x: 10 }}
-              className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center flex-shrink-0">
-                <MapPin className="text-white" size={24} />
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-900 mb-1">Visit Us</h4>
-                <p className="text-gray-600">Lagos, Nigeria</p>
-              </div>
-            </motion.div>
 
           </motion.div>
 
