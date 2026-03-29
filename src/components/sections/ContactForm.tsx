@@ -54,30 +54,8 @@ export default function ContactForm() {
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary-50 relative overflow-hidden">
       {/* Animated background elements */}
-      <motion.div
-        animate={{
-          scale: [1, 1.3, 1],
-          rotate: [0, 180, 360],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary-200 to-accent-200 rounded-full blur-3xl opacity-20"
-      />
-      <motion.div
-        animate={{
-          scale: [1.3, 1, 1.3],
-          rotate: [360, 180, 0],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-accent-200 to-primary-200 rounded-full blur-3xl opacity-20"
-      />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary-200 to-accent-200 rounded-full blur-3xl opacity-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-accent-200 to-primary-200 rounded-full blur-3xl opacity-20 pointer-events-none" />
 
       <div className="container-custom relative z-10">
         <motion.div
