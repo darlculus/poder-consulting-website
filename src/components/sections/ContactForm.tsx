@@ -2,14 +2,14 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, User, MessageSquare, Briefcase, CheckCircle } from 'lucide-react'
+import { Mail, Phone, Send, User, MessageSquare, CheckCircle } from 'lucide-react'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    service: '',
+    services: [] as string[],
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -22,8 +22,17 @@ export default function ContactForm() {
     'ERP Solutions',
   ]
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const toggleService = (service: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      services: prev.services.includes(service)
+        ? prev.services.filter((s) => s !== service)
+        : [...prev.services, service],
+    }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -42,7 +51,7 @@ export default function ContactForm() {
       setIsSubmitted(true)
       setTimeout(() => {
         setIsSubmitted(false)
-        setFormData({ name: '', email: '', phone: '', service: '', message: '' })
+        setFormData({ name: '', email: '', phone: '', services: [], message: '' })
       }, 5000)
     } catch {
       alert('Something went wrong. Please try again or email us directly at assist@poderconsulting-ng.com')
@@ -202,24 +211,37 @@ export default function ContactForm() {
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Service Needed *
                   </label>
-                  <div className="relative">
-                    <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
-                    <motion.select
-                      whileFocus={{ scale: 1.02 }}
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      required
-                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-600 focus:outline-none transition-all appearance-none bg-white"
-                    >
-                      <option value="">Select a service</option>
-                      {services.map((service) => (
-                        <option key={service} value={service}>
+                  <div className="border-2 border-gray-200 rounded-lg p-3 space-y-2">
+                    {services.map((service) => (
+                      <label key={service} className="flex items-center gap-3 cursor-pointer group">
+                        <div
+                          onClick={() => toggleService(service)}
+                          className={`w-5 h-5 rounded flex items-center justify-center border-2 flex-shrink-0 transition-colors ${
+                            formData.services.includes(service)
+                              ? 'bg-primary-600 border-primary-600'
+                              : 'border-gray-300 group-hover:border-primary-400'
+                          }`}
+                        >
+                          {formData.services.includes(service) && (
+                            <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                          )}
+                        </div>
+                        <span
+                          onClick={() => toggleService(service)}
+                          className={`text-sm transition-colors ${
+                            formData.services.includes(service) ? 'text-primary-600 font-medium' : 'text-gray-700'
+                          }`}
+                        >
                           {service}
-                        </option>
-                      ))}
-                    </motion.select>
+                        </span>
+                      </label>
+                    ))}
                   </div>
+                  {formData.services.length === 0 && (
+                    <p className="text-xs text-gray-400 mt-1">Please select at least one service</p>
+                  )}
                 </div>
 
                 <div>
@@ -243,7 +265,7 @@ export default function ContactForm() {
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || formData.services.length === 0}
                   className="w-full btn-primary flex items-center justify-center gap-2 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
